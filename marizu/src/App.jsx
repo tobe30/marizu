@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Index from './pages'
+import Index from './pages/Index'
 import ProjectsPage from './pages/ProjectPage'
 import { Toaster } from 'react-hot-toast'
 
