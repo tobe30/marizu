@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { ExternalLink, Github, ArrowUpRight, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navbar from '../components/NavBar';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const categories = ['All', 'Wordpress', 'Full-Stack', 'Frontend', 'Backend'];
