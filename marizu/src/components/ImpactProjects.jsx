@@ -27,12 +27,14 @@ const impactProjects = [
   problem: 'Small creators struggle to engage and grow their audience efficiently.',
   solution: 'Built a platform inspired by X where users can post updates, follow others, and interact in real time.',
   impact: [
-    { icon: Users, label: '50+ Users', desc: 'Tested the platform with real users' },
+    { icon: Users, label: '14+ Users', desc: 'Tested the platform with real users' },
     { icon: TrendingUp, label: 'Fast Interaction', desc: 'Posts and updates load instantly' },
   ],
   tech: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS"],
   image: '/projects/x-clone.png',
   color: 'from-foreground/10 to-transparent',
+  live: 'https://x-clone-mernstack.onrender.com',
+
 },
 
   {
@@ -41,13 +43,14 @@ tagline: 'Create amazing content with AI tools',
 problem: 'Content creators and professionals struggle to produce quality content efficiently, juggling multiple tools for writing, designing, and editing.',
 solution: 'Built an all-in-one AI SaaS platform with features like a dashboard, article writing, blog title generation, image creation, background/object removal, and resume review—helping users create content faster and more effectively.',
 impact: [
-  { icon: Users, label: '50+ Users', desc: 'Use the platform daily to create content' },
+  { icon: Users, label: '30+ Creations', desc: 'Use the platform daily to create content' },
   { icon: TrendingUp, label: '40% Faster', desc: 'Time saved compared to using multiple tools' },
   { icon: Zap, label: 'High Quality Output', desc: 'Users report improved content quality and efficiency' },
 ],
 tech: ["React", "TailwindCSS", "Node.js", "Express", "MongoDB", "Gemini API", "Stability AI"],
 image: '/projects/ai.png',
 color: 'from-foreground/10 to-transparent',
+live: 'https://quick-ai-ten-gamma.vercel.app',
 
   },
 ];
