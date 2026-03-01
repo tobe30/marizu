@@ -102,7 +102,7 @@ const Hero = () => {
 
             {/* Secondary – Download CV */}
             <a
-              href="/MarizuResume.pdf"
+              href="/Tobechukwu_Marizu_Resume.pdf"
               download="Tobe_Marizu_CV.pdf" 
               className="
                 btn

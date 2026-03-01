@@ -60,7 +60,7 @@ const Navbar = () => {
 
               {/* CV Button */}
              <a
-               href="/MarizuResume.pdf"
+               href="/Tobechukwu_Marizu_Resume.pdf"
               download="Tobe_Marizu_CV.pdf"
                 className="btn btn-md rounded-full bg-black transition-all duration-300 text-white hover:scale-105 hover:bg-neutral-800 gap-2 px-6"
                 >
