@@ -2,9 +2,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+body {
+  font-family: 'Inter', sans-serif;
+}
 
-
-.mono{
+.mono {
   font-family: 'JetBrains Mono', monospace;
 }
 
@@ -20,6 +22,44 @@
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
 html {
   scroll-behavior: smooth;
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-base-100 text-base-content;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-base-content;
+  }
+
+  p,
+  span,
+  li,
+  a {
+    @apply text-inherit;
+  }
+}
+
+@layer components {
+  .section-wrapper {
+    @apply bg-base-100 text-base-content;
+  }
+
+  .section-muted {
+    @apply text-base-content/70;
+  }
+
+  .card-surface {
+    @apply bg-base-100 text-base-content border border-base-300;
+  }
 }
