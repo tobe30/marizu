@@ -47,7 +47,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="mono text-[1rem] md:text-[1rem] text-gray-600"
           >
-            {'// Developer & Problem Solver'}
+            {'//Backend Developer & Problem Solver'}
           </motion.p>
 
           {/* Hero Name */}
@@ -68,9 +68,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-[1.25rem] md:text-[1.3rem] text-neutral-600 max-w-2xl mx-auto mb-10"
           >
-            I build experiences, not just websites.
+            I build scalable products and 
             <br className="hidden md:block" />
-            <span className="text-black font-medium">Full-stack developer</span> crafting digital solutions that matter.
+            <span className="text-black font-medium">digital experiences</span> experiences that solve real-world problems.
           </motion.p>
 
           {/* CTA Buttons */}

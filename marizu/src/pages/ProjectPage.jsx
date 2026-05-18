@@ -8,8 +8,18 @@ import Footer from '../components/Footer';
 const categories = ['All', 'Wordpress', 'Full-Stack', 'Frontend', 'Backend'];
 
 const projects = [
-  {
+     {
     id: 1,
+    title: 'Lecture Hub',
+    description: 'Seamless Live Lectures for Modern Classrooms',
+    image: '/projects/lecture.png',
+    tech: ["React", "TailwindCSS", "Nodejs", "Express", "MongoDB"],
+    category: 'Full-Stack',
+    live: 'https://lecture-hub-nine.vercel.app/',
+    github: 'https://github.com/tobe30/lecture-hub',
+  },
+  {
+    id: 2,
     title: 'Gabbs',
     description: 'Ecommerce website inspired by gabbs ultramart, Nigeria.',
     image: '/projects/gabbs.png',
@@ -19,7 +29,7 @@ const projects = [
     live: 'https://gabbs-psi.vercel.app',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Sleekabyte',
     description: 'Redesigned a tech website for sleekabyte Uk.',
     image: '/projects/at.png',
@@ -28,7 +38,7 @@ const projects = [
     live: 'https://sleekabyte.com',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Tessi: AI-Powered CGPA Calculator',
     description: 'Empowering students with AI-powered CGPA tools. Instantly transform your raw results into clear grades and academic classifications.',
     image: '/projects/tessi.png',
@@ -38,7 +48,7 @@ const projects = [
     live: 'https://tessi-ai.vercel.app',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Ai SaaS app',
     description: 'Create amazing content with Ai tools',
     image: '/projects/ai.png',
@@ -48,7 +58,7 @@ const projects = [
     live: 'https://quick-ai-ten-gamma.vercel.app/',
   },
   {
-    id: 5,
+    id: 6,
     title: 'X clone',
     description: 'I built X clone using the latest technologies.',
     image: '/projects/x-clone.png',
@@ -59,7 +69,7 @@ const projects = [
 
   },
   {
-    id: 6,
+    id: 7,
     title: 'LMS',
     description: 'Modern Learning Management System (LMS) web application for online courses.',
     image: '/projects/lms.png',
@@ -69,7 +79,7 @@ const projects = [
     live: 'https://lms-frontend-seven-xi.vercel.app',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Oni Shop',
     description: 'An Online Market Place Better than JIJI.',
     image: '/projects/oni.jpg',
@@ -79,7 +89,7 @@ const projects = [
     live: 'https://onitsha.onrender.com',
   },
    {
-    id: 8,
+    id: 9,
     title: 'Aza Exchange',
     description: 'A fintech banking exchange platform.',
     image: '/projects/aza.png',
@@ -89,7 +99,7 @@ const projects = [
     live: 'https://azaex.onrender.com',
   },
   {
-    id: 9,
+    id: 10,
     title: 'JFK Educational website',
     description: 'Fixed An Education website.',
     image: '/projects/jfk.png',
@@ -98,7 +108,7 @@ const projects = [
     live: 'https://jfktech.co.uk',
   },
    {
-    id: 10,
+    id: 11,
     title: 'Streamify',
     description: 'A video, call language exchange plateform.',
     image: '/projects/streamify.png',
@@ -108,7 +118,7 @@ const projects = [
     github: 'https://github.com/tobe30/video-call-app',
   },
   {
-    id: 11,
+    id: 12,
     title: 'Crop Cura',
     description: 'Crop Detection Ai Landing Page Coming Soon.',
     image: '/projects/cropcura.png',
@@ -118,7 +128,7 @@ const projects = [
     github: 'https://github.com/tobe30/cropcura-Ai',
   },
   {
-    id: 12,
+    id: 13,
     title: 'Financial Service.',
     description: 'Serial Entrepreneur Africa’s most Experienced financial coach.',
     image: '/projects/gehgeh.png',

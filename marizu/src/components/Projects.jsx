@@ -6,8 +6,28 @@ import { Link } from 'react-router-dom';
 const categories = ['All', 'Wordpress', 'Full-Stack', 'Frontend', 'Backend'];
 
 const projects = [
-  {
+   {
     id: 1,
+    title: 'Lecture Hub',
+    description: 'Seamless Live Lectures for Modern Classrooms',
+    image: '/projects/lecture.png',
+    tech: ["React", "TailwindCSS", "Nodejs", "Express", "MongoDB"],
+    category: 'Full-Stack',
+    live: 'https://lecture-hub-nine.vercel.app/',
+    github: 'https://github.com/tobe30/lecture-hub',
+  },
+   {
+    id: 2,
+    title: 'MacBook M4 Landing page ',
+    description: 'redesigning the MacBook M4 Landing page website',
+    image: '/projects/a.png',
+    tech: ["React", "TailwindCSS", "three.JS", "GSAP"],
+    category: 'Frontend',
+    github: 'https://github.com/tobe30/macbook_landing',
+    live: 'https://macbook-pro-gamma.vercel.app/',
+  },
+  {
+    id: 3,
     title: 'Gabbs',
     description: 'Ecommerce website inspired by gabbs ultramart, Nigeria.',
     image: '/projects/gabbs.png',
@@ -17,7 +37,7 @@ const projects = [
     live: 'https://gabbs-psi.vercel.app',
   },
   {
-    id: 2,
+    id: 4,
     title: 'Sleekabyte',
     description: 'Redesigned a tech website for sleekabyte Uk.',
     image: '/projects/at.png',
@@ -26,7 +46,7 @@ const projects = [
     live: 'https://sleekabyte.com',
   },
   {
-    id: 3,
+    id: 5,
     title: 'Tessi: AI-Powered CGPA Calculator',
     description: 'Empowering students with AI-powered CGPA tools. Instantly transform your raw results into clear grades and academic classifications.',
     image: '/projects/tessi.png',
@@ -35,7 +55,7 @@ const projects = [
     live: 'https://tessi-ai.vercel.app',
   },
   {
-    id: 4,
+    id: 6,
     title: 'Ai SaaS app',
     description: 'Create amazing content with Ai tools',
     image: '/projects/ai.png',
@@ -44,26 +64,7 @@ const projects = [
     github: 'https://github.com/tobe30/QuickAi',
     live: 'https://quick-ai-ten-gamma.vercel.app/',
   },
-  {
-    id: 5,
-    title: 'X clone',
-    description: 'I built X clone using the latest technologies.',
-    image: '/projects/x-clone.png',
-    tech: ["React", "TailwindCSS", "Nodejs", "Express", "MongoDB"],
-    category: 'Full-Stack',
-    live: 'https://x-clone-mernstack.onrender.com/',
-    github: 'https://github.com/tobe30/X-Clone-MERNSTACK',
-  },
-  {
-    id: 6,
-    title: 'LMS',
-    description: 'Modern Learning Management System (LMS) web application for online courses.',
-    image: '/projects/lms.png',
-    tech: ["React", "TailwindCSS", "Nodejs", "Express", "MongoDB"],
-    category: 'Full-Stack',
-    github: 'https://github.com/tobe30/lms',
-    live: 'https://lms-frontend-seven-xi.vercel.app',
-  },
+ 
 ];
 
 const Projects = () => {

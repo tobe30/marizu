@@ -22,18 +22,18 @@ const impactProjects = [
   },
  {
   id: 2,
-  title: 'X Clone',
-  tagline: 'Social Platform for Content Sharing',
-  problem: 'Small creators struggle to engage and grow their audience efficiently.',
-  solution: 'Built a platform inspired by X where users can post updates, follow others, and interact in real time.',
+  title: 'Lecture Hub',
+  tagline: 'Seamless Live Lectures for Modern Classrooms',
+  problem: 'Lectures and online classes can be disorganized, with no way to track attendance or engagement effectively.',
+  solution: 'built a platform where lecturers can host online classes and actually manage students not just run meetings like Zoom.',
   impact: [
-    { icon: Users, label: '14+ Users', desc: 'Tested the platform with real users' },
-    { icon: TrendingUp, label: 'Fast Interaction', desc: 'Posts and updates load instantly' },
+    { icon: Users, label: '3+ Users', desc: 'Tested the platform with friends' },
+    { icon: TrendingUp, label: 'Live video', desc: 'Attendance tracking' },
   ],
-  tech: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS"],
-  image: '/projects/x-clone.png',
+  tech: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS", "Stream.io"],
+  image: '/projects/lecture.png',
   color: 'from-foreground/10 to-transparent',
-  live: 'https://x-clone-mernstack.onrender.com',
+  live: 'https://lecture-hub-nine.vercel.app',
 
 },
 

@@ -66,7 +66,7 @@ const About = () => {
           </h2>
 
           <p className="text-lg mb-3 text-neutral-500 font-semibold leading-relaxed">
-            I'm Tobe Marizu, with 3+ years of experience building web applications that solve real problems and deliver seamless user experiences. My journey in tech started with curiosity and evolved into a mission to solve meaningful problems through code. I specialize in building scalable backend systems, secure APIs, and responsive web applications using Django, Node.js, and the MERN stack.
+            I'm Tobe Marizu, with 4+ years of experience building web applications that solve real problems and deliver seamless user experiences. My journey in tech started with curiosity and evolved into a mission to solve meaningful problems through code. I specialize in building scalable backend systems, secure APIs, and responsive web applications using Django, Node.js, and the MERN stack.
           </p>
           <p className="text-lg text-neutral-500 font-semibold leading-relaxed">
             A self-taught programmer, I love building startups and digital solutions that simplify life. I thrive at the intersection of innovation, execution, and impact, turning ideas into products that are not just functional, but memorable and user-focused.
