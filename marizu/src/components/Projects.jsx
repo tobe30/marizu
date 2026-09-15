@@ -6,16 +6,15 @@ import { Link } from 'react-router-dom';
 const categories = ['All', 'Wordpress', 'Full-Stack', 'Frontend', 'Backend'];
 
 const projects = [
-   {
-    id: 1,
-    title: 'Lecture Hub',
-    description: 'Seamless Live Lectures for Modern Classrooms',
-    image: '/projects/lecture.png',
-    tech: ["React", "TailwindCSS", "Nodejs", "Express", "MongoDB"],
-    category: 'Full-Stack',
-    live: 'https://lecture-hub-nine.vercel.app/',
-    github: 'https://github.com/tobe30/lecture-hub',
-  },
+{
+  id: 1,
+  title: 'Elomaze',
+  description: 'Helping Students Find Trusted Accommodation and Reliable Agents',
+  image: '/projects/elomaze.png',
+  tech: ["React", "TailwindCSS", "Node.js", "Express", "MongoDB"],
+  category: 'Full-Stack',
+  live: 'https://elomaze.com',
+},
    {
     id: 2,
     title: 'MacBook M4 Landing page ',
@@ -45,15 +44,16 @@ const projects = [
     category: 'Wordpress',
     live: 'https://sleekabyte.com',
   },
-  {
-    id: 5,
-    title: 'Tessi: AI-Powered CGPA Calculator',
-    description: 'Empowering students with AI-powered CGPA tools. Instantly transform your raw results into clear grades and academic classifications.',
-    image: '/projects/tessi.png',
-    tech: ["React", "TailwindCSS", "Nodejs", "Express", "MongoDB"],
-    category: 'Full-Stack',
-    live: 'https://tessi-ai.vercel.app',
-  },
+{
+  id: 5,
+  title: 'Socially',
+  description: 'A full-stack social platform for connecting, sharing posts, and engaging with others in real time.',
+  image: '/projects/socially.png',
+  tech: ["Next.js", "TypeScript", "PostgreSQL", "Clerk", "TailwindCSS"],
+  category: 'Full-Stack',
+  live: 'https://nextjs-course-beta-five.vercel.app',
+  github: 'https://github.com/tobe30/nextjs-course'
+},
   {
     id: 6,
     title: 'Ai SaaS app',

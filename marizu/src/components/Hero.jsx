@@ -68,9 +68,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-[1.25rem] md:text-[1.3rem] text-neutral-600 max-w-2xl mx-auto mb-10"
           >
-            I build scalable products and 
+            I build scalable software that
             <br className="hidden md:block" />
-            <span className="text-black font-medium">digital experiences</span> experiences that solve real-world problems.
+            <span className="text-black font-medium">solves real problems</span> and helps businesses grow.
           </motion.p>
 
           {/* CTA Buttons */}

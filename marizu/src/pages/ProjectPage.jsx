@@ -8,6 +8,25 @@ import Footer from '../components/Footer';
 const categories = ['All', 'Wordpress', 'Full-Stack', 'Frontend', 'Backend'];
 
 const projects = [
+  {
+    id: 14,
+    title: 'Elomaze',
+    description: 'Helping students find trusted accommodation and reliable agents.',
+    image: '/projects/elomaze.png',
+    tech: ['React', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB'],
+    category: 'Full-Stack',
+    live: 'https://elomaze.com',
+  },
+  {
+    id: 15,
+    title: 'Socially',
+    description: 'A full-stack social platform for connecting, sharing posts, and engaging with others in real time.',
+    image: '/projects/socially.png',
+    tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Clerk', 'TailwindCSS'],
+    category: 'Full-Stack',
+    live: 'https://nextjs-course-beta-five.vercel.app',
+    github: 'https://github.com/tobe30/nextjs-course',
+  },
      {
     id: 1,
     title: 'Lecture Hub',
@@ -229,6 +248,8 @@ const ProjectsPage = () => {
                   {project.github && (
                     <a
                       href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium hover:bg-background transition-colors"
                     >
                       <Github className="w-4 h-4" />
@@ -238,6 +259,8 @@ const ProjectsPage = () => {
                   {project.live && (
                     <a
                       href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:scale-105 transition-transform"
                     >
                       <ExternalLink className="w-4 h-4" />

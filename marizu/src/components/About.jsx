@@ -10,7 +10,7 @@ const skills = [
   { name: 'MongoDB', category: 'Database' },
   { name: 'PostgreSQL', category: 'Database' },
   { name: 'Tailwind CSS', category: 'Styling' },
-  { name: 'REST APIs', category: 'Backend' },
+  { name: 'wordpress', category: 'CMS' },
 ];
 
 const timeline = [
@@ -61,15 +61,15 @@ const About = () => {
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-neutral-900">
-            Turning ideas into <br />
-            <span className="text-neutral-500">digital reality</span>
+              Building solutions to <br />
+            <span className="text-neutral-500">real-world problems</span>
           </h2>
 
           <p className="text-lg mb-3 text-neutral-500 font-semibold leading-relaxed">
-            I'm Tobe Marizu, with 4+ years of experience building web applications that solve real problems and deliver seamless user experiences. My journey in tech started with curiosity and evolved into a mission to solve meaningful problems through code. I specialize in building scalable backend systems, secure APIs, and responsive web applications using Django, Node.js, and the MERN stack.
+            I'm Tobe Marizu, a software engineer with 4+ years of experience building and shipping web applications. I specialize in backend development and full-stack engineering, building scalable systems, secure APIs, and responsive applications using Django, Node.js, React, and modern databases.
           </p>
           <p className="text-lg text-neutral-500 font-semibold leading-relaxed">
-            A self-taught programmer, I love building startups and digital solutions that simplify life. I thrive at the intersection of innovation, execution, and impact, turning ideas into products that are not just functional, but memorable and user-focused.
+            I'm a self-taught developer who enjoys taking complex problems and turning them into practical software solutions. Beyond writing code, I focus on understanding the problem, designing the right solution, and building products that are reliable, easy to use, and valuable to the people and businesses they serve.
           </p>
         </motion.div>
 

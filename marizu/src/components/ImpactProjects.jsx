@@ -4,22 +4,22 @@ import { useRef } from 'react';
 import { ArrowRight, Users, TrendingUp, Zap, ExternalLink } from 'lucide-react';
 
 const impactProjects = [
-  {
-    id: 1,
-    title: 'Tessi',
-    tagline: ' AI-Powered CGPA Calculator',
-    problem: 'Students struggle to calculate their cgpa in universities.',
-    solution: 'Built a web app that lets students input their grades and instantly calculate their CGPA, with options',
-    impact: [
-      { icon: Users, label: '30+ uses', desc: 'users post their transcript' },
-      { icon: TrendingUp, label: '40% Faster', desc: 'Gives you your grades instantly' },
-      { icon: Zap, label: '0 Errors', desc: 'Accurate CGPA calculations every time' },
-    ],
-    tech: ["React", "TailwindCSS", "Nodejs", "Express", "MongoDB"],
-    image: '/projects/tessi.png',
-    color: 'from-foreground/10 to-transparent',
-    live: 'https://tessi-ai.vercel.app',
-  },
+{
+  id: 1,
+  title: 'Elomaze',
+  tagline: 'Student Accommodation, Made Easier',
+  problem: 'Students struggle to find reliable accommodation, often depending on scattered WhatsApp posts, word of mouth, and unverified agents.',
+  solution: 'Built and launched a platform that helps students discover available accommodation and connect with verified agents in one place.',
+  impact: [
+    { icon: Users, label: 'Real Users', desc: 'Launched and being used by students and housing agents' },
+    { icon: TrendingUp, label: 'Growing Network', desc: 'Onboarding agents, listings, and service providers' },
+    { icon: Zap, label: 'Simpler Search', desc: 'Brings accommodation discovery into one accessible platform' },
+  ],
+  tech: ["React", "TailwindCSS", "Node.js", "Express", "MongoDB"],
+  image: '/projects/elomaze.png',
+  color: 'from-foreground/10 to-transparent',
+  live: 'https://elomaze.com',
+},
  {
   id: 2,
   title: 'Lecture Hub',
@@ -38,6 +38,7 @@ const impactProjects = [
 },
 
   {
+id: 3,
 title: 'AI SaaS App',
 tagline: 'Create amazing content with AI tools',
 problem: 'Content creators and professionals struggle to produce quality content efficiently, juggling multiple tools for writing, designing, and editing.',

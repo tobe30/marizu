@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Download } from 'lucide-react';
 
 const navLinks = [
-  { name: 'About', href: '#about' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Impact', href: '#impact' },
-  { name: 'Brands', href: '#brands' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'About', href: '/#about' },
+  { name: 'Projects', href: '/#projects' },
+  { name: 'Impact', href: '/#impact' },
+  { name: 'Brands', href: '/#brands' },
+  { name: 'Contact', href: '/#contact' },
 ];
 
 const Navbar = () => {
@@ -132,7 +132,7 @@ const Navbar = () => {
 
                 {/* Mobile CV Button */}
                 <motion.a
-                  href="/MarizuResume.pdf"
+                  href="/Tobechukwu_Marizu_Resume.pdf"
                   download="Tobe_Marizu_CV.pdf"
                   onClick={() => setIsMobileMenuOpen(false)}
                   initial={{ opacity: 0, x: -20 }}

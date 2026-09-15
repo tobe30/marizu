@@ -1,5 +1,5 @@
 import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 const brands = [
   { 
@@ -25,8 +25,6 @@ const brands = [
 const Brands = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [hoveredBrand, setHoveredBrand] = useState(null);
-
   // Duplicate brands for seamless infinite scroll
   const duplicatedBrands = [...brands, ...brands];
 

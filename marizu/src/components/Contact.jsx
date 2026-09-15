@@ -114,7 +114,8 @@ const handleSubmit = (e) => {
 
             {/* CV Download */}
             <a
-              href="#"
+              href="/Tobechukwu_Marizu_Resume.pdf"
+              download="Tobe_Marizu_CV.pdf"
               className="inline-flex items-center gap-3 px-6 py-4 bg-black text-white rounded-xl font-medium hover:scale-105 transition-transform"
             >
               <Download className="w-5 h-5" />
