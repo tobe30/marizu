@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Loader from "../components/Loader.jsx";
 import Maeix from "../components/Maeix.jsx";
 import "../App.css";
@@ -9,6 +9,9 @@ const projects = [
   ["Gabbs", "Ecommerce website inspired by Gabbs Ultramart, Nigeria.", "React, TailwindCSS, Node.js, Express, MongoDB, Stripe, Clerk", "/projects/gabbs.png", "https://gabbs-psi.vercel.app", "https://github.com/tobe30/gabbs"],
   ["AI SaaS App", "Create amazing content with AI tools", "React, TailwindCSS, Node.js, Express, MongoDB, Gemini API, Stability AI", "/projects/ai.png", "https://quick-ai-ten-gamma.vercel.app", "https://github.com/tobe30/QuickAi"],
   ["Socially", "A full-stack social platform for connecting, sharing posts, and engaging with others in real time.", "Next.js, TypeScript, PostgreSQL, Clerk, TailwindCSS", "/projects/socially.png", "https://nextjs-course-beta-five.vercel.app", "https://github.com/tobe30/nextjs-course"],
+  ["Macbook", "Apple Macbook Pro", "React, TailwindCSS, Gsap, 3D-Animation", "/projects/macbook.png",  "https://macbook-fawn.vercel.app", "https://github.com/tobe30/macbook"],
+  ["Lecture Hub", "A platform for hosting and managing online lectures and courses.", "React, TailwindCSS, Node.js, Express, MongoDB", "/projects/lecture.png",  "https://lecture-hub.vercel.app", "https://github.com/tobe30/lecture-hub"],
+  ["CropCura AI", "AI-powered agricultural solution for crop management and yield optimization.", "Reactjs, tailwindcss", "/projects/cropcura.png", "https://www.cropcura.com"],
   ["MAEIX", "One assistant that controls your car, phone and home. The long game.", "Python, LLMs, IoT, Voice"],
 ];
 // TECH STACK: Edit the tool lists shown in the interactive tabs.
@@ -68,12 +71,50 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [menu, setMenu] = useState(false);
   const [sent, setSent] = useState(false);
+  const projectViewportRefs = useRef([]);
   const [darkMode, setDarkMode] = useState(
     () => window.localStorage.getItem("tobe-theme") === "dark",
   );
   useEffect(() => {
     window.localStorage.setItem("tobe-theme", darkMode ? "dark" : "light");
   }, [darkMode]);
+  useEffect(() => {
+    const updateProjectMotion = () => {
+      projectViewportRefs.current.forEach((viewport) => {
+        if (!viewport) return;
+
+        const rect = viewport.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const stickyTop = window.innerWidth <= 600 ? 78 : 94;
+        // How far the card has travelled from the bottom of the screen to its sticky spot
+        const entryDistance = viewportHeight - stickyTop;
+        const progress = Math.min(
+          Math.max(
+            (viewportHeight - rect.top) / entryDistance,
+            0,
+          ),
+          1,
+        );
+        const distance = 1 - progress;
+
+        viewport.style.setProperty("--project-info-y", `${distance * 30}px`);
+        viewport.style.setProperty(
+          "--project-opacity",
+          `${0.35 + progress * 0.65}`,
+        );
+        viewport.style.setProperty("--project-scale", `${0.96 + progress * 0.04}`);
+      });
+    };
+
+    updateProjectMotion();
+    window.addEventListener("scroll", updateProjectMotion, { passive: true });
+    window.addEventListener("resize", updateProjectMotion);
+
+    return () => {
+      window.removeEventListener("scroll", updateProjectMotion);
+      window.removeEventListener("resize", updateProjectMotion);
+    };
+  }, []);
   const finishLoading = useCallback(() => setLoading(false), []);
   const links = [
     ["Work", "#work"],
@@ -189,54 +230,64 @@ function Home() {
             </h2>
             <p>Each one taught me something. Here’s the short version of what I worked on and why.</p>
           </div>
-          <div className="project-list">
+          <div className="project-list project-scroll-stack">
             {projects.map((p, i) => (
-              <article className={`project-card tone-${i}`} key={p[0]}>
-                <div className="project-info">
-                  <div className="project-meta">
-                    <span>
-                      0{i + 1}
-                      {i === 4 && " / IN PROGRESS"}
-                    </span>
-                    <span>PROJECT NOTES</span>
-                  </div>
-                  <h3>
-                    {p[0]}
-                    <span>↗</span>
-                  </h3>
-                  <p className="project-summary">{p[1]}</p>
-                  <div className="tag-list">
-                    {p[2].split(", ").map((x) => (
-                      <span className="badge tech-tag" key={x}>
-                        {x}
+              <div
+                className="project-viewport"
+                key={p[0]}
+                ref={(node) => {
+                  projectViewportRefs.current[i] = node;
+                }}
+              >
+                <article
+                  className={`project-card tone-${i}`}
+                >
+                  <div className="project-info">
+                    <div className="project-meta">
+                      <span>
+                        0{i + 1}
+                        {i === 4 && " / IN PROGRESS"}
                       </span>
-                    ))}
-                  </div>
-                  <div className="project-links">
-                    <a
-                      href={p[5] || "https://github.com/tobe30"}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {p[5] ? "Source code ↗" : "GitHub profile ↗"}
-                    </a>
-                    {p[4] && <a href={p[4]} target="_blank" rel="noreferrer">Live site ↗</a>}
-                  </div>
-                </div>
-                <div className={`project-art project-art-${i}`}>
-                  {p[3] ? (
-                    <img className="project-image" src={p[3]} alt={`${p[0]} website homepage`} />
-                  ) : (
-                    <div className="project-poster">
-                      <div className="poster-topline"><span>PROJECT NOTES</span><span>0{i + 1} / 05</span></div>
-                      <span className="poster-glyph">{["⌂", "⌖", "⌁", "▤", "◉"][i]}</span>
-                      <h4>{p[0]}</h4>
-                      <p>{p[1]}</p>
-                      <div className="poster-bottom"><span>SELECTED WORK</span><span>↗</span></div>
+                      <span>PROJECT NOTES</span>
                     </div>
-                  )}
-                </div>
-              </article>
+                    <h3>
+                      {p[0]}
+                      <span>↗</span>
+                    </h3>
+                    <p className="project-summary">{p[1]}</p>
+                    <div className="tag-list">
+                      {p[2].split(", ").map((x) => (
+                        <span className="badge tech-tag" key={x}>
+                          {x}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="project-links">
+                      <a
+                        href={p[5] || "https://github.com/tobe30"}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {p[5] ? "Source code ↗" : "GitHub profile ↗"}
+                      </a>
+                      {p[4] && <a href={p[4]} target="_blank" rel="noreferrer">Live site ↗</a>}
+                    </div>
+                  </div>
+                  <div className={`project-art project-art-${i}`}>
+                    {p[3] ? (
+                      <img className="project-image" src={p[3]} alt={`${p[0]} website homepage`} />
+                    ) : (
+                      <div className="project-poster">
+                        <div className="poster-topline"><span>PROJECT NOTES</span><span>0{i + 1} / 05</span></div>
+                        <span className="poster-glyph">{["⌂", "⌖", "⌁", "▤", "◉"][i]}</span>
+                        <h4>{p[0]}</h4>
+                        <p>{p[1]}</p>
+                        <div className="poster-bottom"><span>SELECTED WORK</span><span>↗</span></div>
+                      </div>
+                    )}
+                  </div>
+                </article>
+              </div>
             ))}
           </div>
         </section>
